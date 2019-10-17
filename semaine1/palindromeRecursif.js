@@ -8,4 +8,6 @@ function palindrome(mot) {
 return palindrome(mot.)
 }
 }
-console.log(palindrome("a"))
+console.log(palindrome(
+
+pwd
