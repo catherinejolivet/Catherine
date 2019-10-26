@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>UTILITAIRE BLOCKCHAIN BITCOIN - CONVERTISSEUR </h1>
+    <p id="p"></p>
+    <p><I>Saisir ci-dessous votre nombre dans le champ requis et appuyez sur le boutton correspondant pour le convertir</I> :</p>
+    
+    <label>Hexadécimal</label>
+    <input id="hexadecimal">
+    <button id="hexaTodecimal" onclick="conversionHexToDeci()">cliquez ici</button>
+        
+    <label>Décimal</label>
+    <input id="decimal">
+    <button id="decimalTohexa" onclick="conversionDeciToHex()">cliquez ici</button>
+
+    <label>Cible</label>
+    <input id="currentCible">
+    <button id="cibletodifficulty" onclick="cibletodifficulty()">cliquez ici</button>
+
+    <label>Difficulté</label>
+    <input id="difficulté">
+    
+    <script>
+        function afficher() {
+            document.getElementById("hexadecimal").value = 1
+            window.alert("Affichez le résultat !")
+        }
+
+        function conversionHexToDeci() {
+            hex = document.getElementById("hexadecimal").value;
+            resultat = 0;
+            puissance = hex.length - 1 // la puissance maximale
+            for(var caracter of hex){ // Parcours chaque caractere de la chaine hexadecimal 
+                deci = parseInt(caracter,16) // conversion hex vers décimal
+                //Calcul
+                //resultat += deci * 16^puissance
+                resultat = resultat + (deci * Math.pow(16,puissance))
+                //Decrementer la puissance
+                puissance-- // puissance = puisssance - 1
+            }
+            document.getElementById("decimal").value = resultat
+        }
+            
+        function afficher() {
+            document.getElementById("decimal").value = 1
+            window.alert("Affichez le résultat !")
+        }
+            
+        function conversionDeciToHex() {
+            deci = document.getElementById("decimal").value
+            hexa = deci.toString(16)
+            if (deci.length % 2 ==1) {
+                hexa = '0' + hexa
+            }{
+            return hexa 
+            }
+            document.getElementById("hexadecimal").value = hexa
+        }
+        
+        function afficher(){
+            document.getElementById("cible").value = 1
+            window.alert("Affichez le résultat !")
+        }
+
+        function cibletodifficulty(){
+            currentCible = document.getElementById("currentcible").value
+            let difficulty
+            var maxCible = 2.7 * Math.pow(10,7)   
+            difficulty = maxCible/currentCible
+            return difficulty
+        }      
+            
+
+    </script>
+</body>
+</html>
