@@ -19,6 +19,9 @@
     <input id="decimal">
     <button id="decimalTohexa" onclick="conversionDeciToHex()">cliquez ici</button>
 
+    <br>
+    <br>
+
     <label>Cible</label>
     <input id="currentCible">
     <button id="cibletodifficulty" onclick="cibletodifficulty()">cliquez ici</button>
@@ -53,14 +56,14 @@
         }
             
         function conversionDeciToHex() {
-            deci = document.getElementById("decimal").value
-            hexa = deci.toString(16)
-            if (deci.length % 2 ==1) {
-                hexa = '0' + hexa
-            }{
-            return hexa 
+            var deci = document.getElementById("decimal").value
+            var value = parseInt(deci)
+            var hexa = value.toString(16)
+            if (hexa.length % 2 ==1) {
+                hexa = '0' + hexa           
             }
             document.getElementById("hexadecimal").value = hexa
+            return hexa
         }
         
         function afficher(){
@@ -71,11 +74,11 @@
         function cibletodifficulty(){
             currentCible = document.getElementById("currentcible").value
             let difficulty
-            var maxCible = 2.7 * Math.pow(10,7)   
+            var maxCible = 2.7 * Math.pow(10,67)   
             difficulty = maxCible/currentCible
+            document.getElementById("difficulté").value = difficulty
             return difficulty
-        }      
-            
+        }            
 
     </script>
 </body>

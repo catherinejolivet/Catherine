@@ -8,4 +8,4 @@ function palindrome(chaine) {
         }
     }
 }
-console.log(palindrome("esope reste la et se repose")) 
+console.log(palindrome("kayak")) 

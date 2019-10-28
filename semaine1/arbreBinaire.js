@@ -22,6 +22,8 @@ babolab.ajouterNoeud (7)
 console.log("Baobab:", babolab)
 
 
+
+
 // Définir la méthode pour trouver une valeur donnée dans un arbre binaire de recherche
 
 // Ecrire la méthode pour afficher l'arbre selon un parcours infixe
