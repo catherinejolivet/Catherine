@@ -23,7 +23,7 @@ function getTour() public view returns (uint) {
 
 function artisteEnCours() public view returns (string memory) {
     //passagesArtistes [tour]
-    return passagesArtistes[tour -1];
+    return passagesArtistes[tour];
 }
 
 }

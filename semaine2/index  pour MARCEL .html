@@ -34,16 +34,15 @@
             document.getElementById("hexadecimal").value = 1
             window.alert("Affichez le résultat !")
         }
-
         function conversionHexToDeci() {
-            hex = document.getElementById("hexadecimal").value;
-            resultat = 0;
-            puissance = hex.length - 1 // la puissance maximale
+            let hex = document.getElementById("hexadecimal").value;
+            let resultat = 0;
+            let puissance = hex.length - 1 // la puissance maximale
             for(var caracter of hex){ // Parcours chaque caractere de la chaine hexadecimal 
                 deci = parseInt(caracter,16) // conversion hex vers décimal
                 //Calcul
                 //resultat += deci * 16^puissance
-                resultat = resultat + (deci * Math.pow(16,puissance))
+                resultat += resultat + (deci * Math.pow(16,puissance))
                 //Decrementer la puissance
                 puissance-- // puissance = puisssance - 1
             }
@@ -56,11 +55,11 @@
         }
             
         function conversionDeciToHex() {
-            var deci = document.getElementById("decimal").value
+            var deci = document.getElementById("decimal").value;
             var value = parseInt(deci)
             var hexa = value.toString(16)
             if (hexa.length % 2 ==1) {
-                hexa = '0' + hexa           
+                hexa = '0' + hexa
             }
             document.getElementById("hexadecimal").value = hexa
             return hexa
@@ -70,16 +69,16 @@
             document.getElementById("cible").value = 1
             window.alert("Affichez le résultat !")
         }
-
+        
         function cibletodifficulty(){
-            currentCible = document.getElementById("currentcible").value
+            currentCible = document.getElementById("currentCible").value
             let difficulty
             var maxCible = 2.7 * Math.pow(10,67)   
             difficulty = maxCible/currentCible
             document.getElementById("difficulté").value = difficulty
             return difficulty
-        }            
-
+        }      
+            
     </script>
 </body>
 </html>

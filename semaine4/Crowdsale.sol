@@ -1,0 +1,3 @@
+contract Crowdsale {
+    mapping(address)
+}
