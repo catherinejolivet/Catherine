@@ -8,6 +8,6 @@
     "devDependencies": {
         "@openzeppelin/contracts": "^2.4.0",
         "@openzeppelin/test-helpers": "^0.5.3",
-        "truffle": "^5.0.44"
+        "truffle": "^5.6.5"
     }
 }
